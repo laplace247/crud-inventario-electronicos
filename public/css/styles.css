@@ -1,14 +1,15 @@
-body {
-    font-family: Arial, sans-serif;
+html, body {
+    height: 100%;
     margin: 0;
     padding: 0;
-    background-color: #f8f9fa;
+    display: flex;
+    flex-direction: column;
 }
 
 header {
     background-color: #007bff;
     color: white;
-    padding: 10px 0;
+    padding: 5px 0;
     text-align: center;
 }
 
@@ -16,10 +17,18 @@ h1, h2, h3 {
     color: #343740;
 }
 
+.collapse {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+
 .container {
     width: 80%;
     margin: auto;
     overflow: hidden;
+    flex: 1;
 }
 
 form {
@@ -71,11 +80,9 @@ form input[type="submit"]:hover {
 }
 
 .footer {
-    text-align: center;
-    padding: 10px 0;
-    background-color: #343a40;
-    color: white;
-    position: relative;
-    bottom: 0;
-    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
 }

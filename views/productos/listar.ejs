@@ -15,34 +15,34 @@
         <div class="container mt-5">
             <h1 class="text-center mb-4">Lista de Productos</h1>
             <div class="d-flex justify-content-end mb-3">
-                <a href="/productos/crear" class="btn btn-primary">Crear Producto</a>
+                <a href="/productos/crear" class="btn btn-success">Crear Producto</a>
             </div>
             <table class="table table-bordered table-hover">
-                <thead class="table-dark text-center">
+                <thead class="table-dark text-center align-middle">
                     <tr>
-                        <th>ID</th>
-                        <th>Nombre</th>
-                        <th>Precio</th>
-                        <th>Stock</th>
-                        <th>Imagen</th>
-                        <th>Acciones</th>
+                        <th class="text-center align-middle">ID</th>
+                        <th class="text-center align-middle">Nombre</th>
+                        <th class="text-center align-middle">Precio</th>
+                        <th class="text-center align-middle">Stock</th>
+                        <th class="text-center align-middle">Imagen</th>
+                        <th class="text-center align-middle">Acciones</th>
                     </tr>
                 </thead>
-                <tbody class="text-center align-middle">
+                <tbody>
                     <% productos.forEach(producto=> { %>
                         <tr>
-                            <td>
+                            <td class="text-center align-middle">
                                 <%= producto.id %>
                             </td>
-                            <td>
+                            <td class="text-center align-middle">
                                 <%= producto.nombre %>
                             </td>
-                            <td>S/ <%= producto.precio.toFixed(2) %>
+                            <td class="text-center align-middle">S/ <%= producto.precio.toFixed(2) %>
                             </td>
-                            <td>
+                            <td class="text-center align-middle">
                                 <%= producto.stock %>
                             </td>
-                            <td>
+                            <td class="text-center align-middle">
                                 <% if (producto.imagen) { %>
                                     <img src="/uploads/<%= producto.imagen %>" width="60" height="60"
                                         style="object-fit: cover;">
@@ -50,13 +50,16 @@
                                         <span class="text-muted">Sin imagen</span>
                                         <% } %>
                             </td>
-                            <td>
-                                <a href="/productos/ver/<%= producto.id %>" class="btn btn-info">Detalles</a>
-                                <a href="/productos/editar/<%= producto.id %>" class="btn btn-warning">Editar</a>
-                                <form action="/productos/eliminar/<%= producto.id %>" method="POST"
-                                    style="display:inline; padding: 0;">
-                                    <button type="submit" class="btn btn-danger" onclick="return confirm('¿Seguro que deseas eliminar este producto?')">Eliminar</button>
-                                </form>
+                            <td class="text-center align-middle" style ="width: 380px;">
+                                <div class="d-flex justify-content-center gap-2">
+                                    <a href="/productos/ver/<%= producto.id %>" class="btn btn-info">Detalles</a>
+                                    <a href="/productos/editar/<%= producto.id %>" class="btn btn-warning">Editar</a>
+                                    <form action="/productos/eliminar/<%= producto.id %>" method="POST"
+                                        style="display:inline; padding: 0;">
+                                        <button type="submit" class="btn btn-danger"
+                                            onclick="return confirm('¿Seguro que deseas eliminar este producto?')">Eliminar</button>
+                                    </form>
+                                </div>
                             </td>
                         </tr>
                         <% }) %>
