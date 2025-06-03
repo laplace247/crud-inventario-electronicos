@@ -1,4 +1,8 @@
-html, body {
+html {
+    height: auto;
+}
+
+body {
     height: 100%;
     margin: 0;
     padding: 0;
@@ -9,18 +13,12 @@ html, body {
 header {
     background-color: #007bff;
     color: white;
-    padding: 5px 0;
+    padding: 10px 0;
     text-align: center;
 }
 
 h1, h2, h3 {
     color: #343740;
-}
-
-.collapse {
-    display: flex;
-    justify-content: center;
-    text-align: center;
 }
 
 
