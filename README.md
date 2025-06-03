@@ -74,8 +74,7 @@ crud-inventario-electronicos
 - Eliminar producto
 ![eliminar](https://github.com/user-attachments/assets/af3e03a6-2128-45ea-8fb6-8f63e51a66e3)
 - BD
-![bd](https://github.com/user-attachments/assets/595f80d9-3163-4601-921d-890db735d150)
-
+![bd](https://github.com/user-attachments/assets/d064088d-960b-4048-998d-5db6c7d64ae8)
 
 ## Contribuciones
 
